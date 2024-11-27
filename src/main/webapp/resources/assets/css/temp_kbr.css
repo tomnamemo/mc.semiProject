@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+/* 보라 css / PC버전 */
+main.ui-index {}
+main.ui-index  section > article { overflow: hidden;}
+
+main.ui-index section.has-slide {padding: 0;height: 100dvh;}
+main.ui-index section.has-slide article{width: 100%;height: calc(100vh - 80px);}
+main.ui-index .ui-form.search {margin-top: 40px;}
+
+/* index.html .main-swiper */
+.main-swiper { position: relative;height: 100%;width: 100%;overflow: hidden;}
+.swiper-wrapper.main {display: flex;transition: transform 1s ease-in-out;}
+.swiper-slide {
+	position: absolute;
+	top: 0;left: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+	object-fit: cover;
+}
+.swiper-slide.main-slide-1 {background-image: url('../images/index_slides/main_slide_1.jpg');}
+.swiper-slide.main-slide-2 {background-image: url('../images/index_slides/main_slide_2.jpg');}
+.swiper-slide.main-slide-3 {background-image: url('../images/index_slides/main_slide_3.jpg');}
+
+.overlay {
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+	display: flex;flex-direction: column;justify-content: center;align-items: center;background: rgba(0, 0, 0, 0.48);
+	z-index: 12;
+}
+
+.main-content {
+	display: flex;flex-direction: column;gap:40px;justify-content: space-between;position: relative;
+	width: calc(100vw - 1000px);min-width: 760px;max-width: 900px; height: auto;
+	color:var(--fc-fff);text-align: center;
+}
+
+.text-slide-list ul {display: flex; flex-direction: column;gap:12px;overflow: hidden;}
+.text-slide-list ul li.desc{margin-top: 40px;}
+.text-slide-list ul li{opacity: 0;transform: translateY(30px); transition: opacity 0.5s ease-in, transform 0.5s;}
+
+
+main.ui-index .content.recommand {position: relative;flex-direction: column;justify-content: space-between;}
+main.ui-index .content.recommand .rec {display: flex;flex-direction: column;padding-top: 60px;}
+main.ui-index .content.recommand .rec.r1 {flex-grow:0;flex-shrink:1;flex-basis:700px;}
+
+
+main.ui-detail section > article {gap: 60px;}
+main.ui-detail section > article .content{align-items: flex-start;}
+main.ui-detail .map-wrap,
+main.ui-detail .map-wrap #map {width: 100%;height: 500px;}
+
+/* index.html .recommand-swiper */
+.recommand-swiper {width: 100%;height: auto;}
+.swiper-slide.recommand-slide {width: calc(100% / 3);}
+
+.recommand-swiper .recommand {display: flex;flex-direction: column;gap:20px;}
+
+.recommand-swiper .recommand .item-image {width: 360px;height: 216px;max-height: 216px;border-radius: 8px;overflow: hidden;transition: all 0.3s ease-in-out;}
+.recommand-swiper .recommand .item-image .img {width: 100%;object-fit: cover;transition: all 0.3s ease-in-out;}
+.recommand-swiper .recommand:hover .item-image .img {transform: scale(1.2);}
+
+.recommand-swiper .recommand .item-info {flex:1;display: flex;flex-direction : column;flex-wrap:nowrap;}
+.recommand-swiper .recommand .item-info .info-title {transition: all 0.3s ease-in-out;}
+.recommand-swiper .recommand:hover .item-info .info-title {color: var(--primary-green);}
+
+.item-info .info-location {font-size: 12px;font-weight: 400;color: var(--primary-green);}
+.item-info .info-location .icon{width: 12px;height: 16px;background: url('../images/common/pin.png') center center no-repeat;background-size: cover;}
+.item-info .info-location .label{margin-left: 4px;}
+
+.recommand-swiper .recommand .item-detail {display: flex;flex-direction: column;justify-content: flex-end;}
+.recommand-swiper .recommand .item-detail .detail-price{text-align: right;}
+
+/* 추천캠핑장 상세보기 */
+main.ui-detail .content-title {display: flex;justify-content: space-between;width: 100%;}
+main.ui-detail .content-title .tel{color: var(--primary-green)}
+main.ui-detail .content-title .item-info ,
+main.ui-detail .content-title .item-detail {display: flex;flex-direction: column;gap: 16px;}-detail .content .content-title .item-info {}
+main.ui-detail .content-title .item-info .info-location{font-size: .875rem;}
+main.ui-detail .content-title .item-detail{text-align: right;}
+main.ui-detail .content-title .item-detail .detail-price{font-size: 1.5rem;}
+
+main.ui-detail .ui-photo-book {width: 100%; height: auto;border-radius: 16px;overflow: hidden;}
+main.ui-detail .ui-photo-book ul {
+    display: grid;height: auto;gap: 12px;
+    grid-template-columns: calc(50% - 6px) calc(25% - 6px) calc(25% - 6px);grid-template-rows: calc(50% - 6px) calc(50% - 6px);
+}
+main.ui-detail .ui-photo-book li {height: 100%;overflow: hidden;}
+main.ui-detail .ui-photo-book li:first-of-type {grid-column: 1 /2;grid-row: 1 / 3;}
+main.ui-detail .ui-photo-book li img{width: 100%;height: 100%;object-fit: cover;}
+
+main.ui-detail .text-list {width: 100%;display: flex;flex-wrap: wrap;}
+main.ui-detail .text-list li {flex-basis: 50%;padding: 4px 0 ;}
+main.ui-detail .text-list li ul{margin-top: 12px;font-size: .875rem;color: var(--fc-333);}
+
+
+
+
+/* .ui-form login,  search , sign-up  */
+.ui-form {}
+.ui-form ul {display: flex;flex-direction: column;gap: 20px;}
+.ui-form ul li {display: flex;flex-wrap: nowrap;gap: 16px;}
+.ui-form ul li .field {flex-grow:1;flex-shrink: 1; flex-basis: auto;}
+.ui-form .field {display: flex; align-items: flex-start;}
+.ui-form .field .label {flex-grow: 0;flex-shrink: 0;flex-basis: 120px; padding: 14px 0; color: var(--fc-333);}
+.ui-form .field .label:not(.clipped) + .ui-input {margin-left: 24px;}
+.ui-form .field .ui-input {flex-grow: 1; flex-shrink: 1;flex-basis: auto;}
+
+.ui-form.login {width: 100%;}
+.ui-form.login ul li {justify-content: center;}
+.ui-form.login ul li .ux-divider{margin: 12px 0 16px 0;}
+
+
+.ui-form.search {padding:24px;background-color: rgba(255, 255, 255, .9);backdrop-filter: blur(10px); border-radius: 16px;}
+
+.ui-form.sign-up {width: 720px;}
+
+/* 회원가입 */
+main.ui-sign-up .content {justify-content: center;}
+main.ui-sign-up .ux-button-bar{margin-top: 40px;}
+
+
+
+.ui-input .inputs:not(.fromto-date) {display: flex;align-items: center;gap: 16px;position: relative;}
+.ui-input .input {display: flex;align-items: center;position: relative;}
+.ui-input .input.dsif {display: inline-flex;}
+.ui-input .input.outlined {border-radius: 8px;}
+.ui-input .input.readonly {background-color: var(--bg-readonly);}
+.ui-input .input.disabled {background-color: var(--bg-disabled);}
+.ui-input .input > div + div {margin-top: 8px;}
+.ui-input .input > input[type="text"],
+.ui-input .input > input[type="password"],
+.ui-input .input > input[type="number"],
+.ui-input .input > input[type="search"],
+.ui-input .input > .ui-selectmenu-button {font-size: 1rem;font-weight: 500;flex-grow: 1;flex-shrink: 1;flex-basis: auto;}
+.ui-input .input span.at,
+.ui-input .input span.dash {padding: 0 8px;}
+/* 캠핑장명 검색 */
+.ui-input .input.address-search {flex-grow: 1;flex-shrink: 1;flex-basis: auto;background: var(--bg-fff);overflow: hidden;}
+
+/* 인풋 요소 초점 시각화 */
+.ui-input .input {transition: box-shadow .2s ease;}
+.ui-input .inputs.outlined:before,
+.ui-input .input.outlined:before {
+  display: block;position: absolute;top: 0;right: 0;bottom:0;left: 0;
+  border-radius: 8px;box-shadow: 0 0 0 1px var(--line-02) inset;
+  pointer-events: none;
+  transition: all .3s ease;content: "";
+  z-index: 11;
+}
+.field .input legend,
+.field .input input,
+.field .input select,
+.field .input textarea:focus {outline: 0;}
+.field .inputs.outlined:focus-within:before,
+.field .input.outlined:focus-within:before {box-shadow: 0 0 0 2px rgba(0, 151, 111, .9) inset;}
+
+/* jquery ui select */
+.ui-button.ui-selectmenu-button {
+  display: flex;align-items: center;justify-content: space-between;flex-direction: row-reverse;
+  height: 52px;margin: 0;padding: 0 16px;border: 1px solid var(--line-02);border-radius: 8px;background: var(--bg-white);
+}
+.ui-button.ui-selectmenu-button .ui-selectmenu-text{font-weight: 400;color: var(--fc-aaa);}
+.ui-button.ui-selectmenu-button:hover,
+.ui-button.ui-selectmenu-button:focus,
+.ui-button.ui-selectmenu-button:active {background-color:var(--bg-fff);}
+.ui-button.ui-selectmenu-button:active{color: #111;}
+.selectmenu.has-selected ~ .ui-selectmenu-button .ui-selectmenu-text{color: #111;}
+
+select:read-only + .ui-button.ui-selectmenu-button.ui-state-disabled {color: var(--fc-666);background-color: var(--bg-disabled);opacity: 1;}
+select:read-only + .ui-button.ui-selectmenu-button.ui-state-disabled .ui-selectmenu-icon {opacity: 0;}
+
+.ui-button .ui-icon.ui-selectmenu-icon,
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon,
+.ui-button:hover .ui-icon, .ui-button:focus .ui-icon {
+    width: 20px;height: 20px;
+    background-image: url('../images/common/icn_dang_select.svg')!important;
+    background-repeat: no-repeat;background-position: 0 0;background-size: 100%;
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content {
+  max-height: 220px;margin: 8px 0;border: 1px solid var(--line-02);border-radius: 8px;box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 5%);
+  overflow-y: auto;background-color: var(--bg-fff);
+}
+
+.ui-selectmenu-menu .ui-menu .ui-menu-item{font-size: 1rem; padding: 14px 12px;font-weight: 400;}
+.ui-selectmenu-menu .ui-menu .ui-menu-item:has(.ui-state-active){background-color: var(--primary-green); }
+.ui-selectmenu-menu .ui-menu .ui-menu-item-wrapper{padding: 0;color: var(--fc-888);}
+.ui-selectmenu-menu .ui-menu .ui-state-focus,.ui-menu .ui-state-active{margin: 0;}
+.ui-selectmenu-menu .ui-state-active,
+.ui-selectmenu-menu .ui-widget-content .ui-state-active{border: none;background-color:transparent; color: var(--fc-fff);font-weight: 400;}
+.ui-selectmenu-menu .ui-state-disabled {display: none;}
+
+/* jquery ui  datepicker */
+.inputs.has-datepicker,
+.input.has-datepicker {display: inline-flex;align-items: center;}
+.input.has-datepicker:hover {cursor: pointer;}
+
+input.datepicker {position:relative;}
+input.datepicker + .ui-datepicker-trigger {position: absolute;top: 16px;right: 16px;}
+.ui-datepicker-trigger {display:inline-block;width:20px;height:20px;vertical-align:middle;text-align:center;font-size:0;}
+
+.fromto-date {flex-grow: 0 !important;background-color: var(--bg-white);border-radius: 8px;white-space: nowrap;}
+.fromto-date .fromto {color: var(--fc-888);display: block;position: relative;margin: 0 16px;}
+.fromto-date input.datepicker{width: 160px;padding-right: 0;font-size: 0.875rem;font-weight: 500;}
+
+.ui-widget.ui-datepicker {width: 240px;overflow: hidden;}
+.ui-widget.ui-widget-content.ui-datepicker {max-height:none;margin:8px 0;padding: 0;border: 1px solid var(--primary-green);background-color: var(--primary-green);border-radius: 8px;}
+.ui-datepicker {padding: 0;border: 1px solid var(--line-02);}
+.ui-datepicker * {padding: 0;border-radius: 0;}
+.ui-datepicker table {font-size: 14px;margin: 0;background-color: var(--bg-fff);}
+.ui-datepicker .ui-datepicker-header {font-weight: normal;color: var(--fc-fff);border: 0;background-color: var(--primary-green);}
+.ui-datepicker .ui-datepicker-header .ui-state-hover {cursor: pointer;border-color: transparent;border-radius: 0;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-year + .ui-datepicker-month {margin-left: 2px;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-year,
+.ui-datepicker .ui-datepicker-header .ui-datepicker-month {color: var(--fc-111);border: 0;border-radius: 4px;}
+
+.ui-datepicker thead {color:var(--fc-fff);background: var(--primary-green);}
+.ui-datepicker .ui-datepicker-title {font-size: 16px;color:var(--fc-fff);margin-top: .4em;margin-bottom: .3em;}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover,
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev {
+  top: 10px;width: 24px;height: 24px;padding: 0;border: 0;background-color: var(--bg-fff);
+  -webkit-mask-image: url('../images/common/icn_rang_01.svg');-webkit-mask-repeat: no-repeat;-webkit-mask-position: 50% 50%;-webkit-mask-size: 16px 16px;
+}
+.ui-datepicker .ui-datepicker-prev {left: 4px;transform: rotate(-180deg);}
+.ui-datepicker .ui-datepicker-next {right: 4px;}
+.ui-datepicker .ui-datepicker-next .ui-icon,
+.ui-datepicker .ui-datepicker-prev .ui-icon {position: absolute;width: 1px;height: 1px;overflow: hidden;margin: -1px;clip: rect(0, 0, 0, 0);}
+
+.ui-datepicker th {font-weight: normal;color:var(--fc-fff);padding: 0.75em 0;border: none;}
+.ui-datepicker td {padding: 0;border: 0;}
+.ui-datepicker td .ui-state-default {text-align: center;font-weight: normal;color: var(--fc-111);margin: 0;padding: .5em;border: 0;background: transparent;}
+.ui-datepicker td .ui-state-active,
+.ui-datepicker td .ui-state-hover {background: rgb(0, 149, 116, .12);}
+.ui-datepicker td .ui-state-highlight {font-weight: bold;color: var(--primary-green);}
+
+.ui-datepicker td.ui-state-disabled {display: table-cell;}
+.ui-datepicker td.ui-state-disabled,
+.ui-datepicker td.ui-state-disabled .ui-state-default {color: var(--fc-888);opacity: .9;}
+
+.ux-divider { width: 100%;border: 1px solid var(--line-03);}
+
+/* dialog */
+.dialog-backdrop {
+	display: none;
+	position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.dialog-wrap {
+	display: none;
+    position: fixed;top: 50%;left: 50%; transform: translate(-50%, -50%);
+	width: 540px;height: auto;padding: 24px 32px 40px;
+    background-color: var(--bg-fff);border: 1px solid #ccc;border-radius: 16px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*dialog active */
+body.dialog-active {overflow: hidden!important;}
+body.dialog-active .dialog-backdrop,
+body.dialog-active .dialog-wrap{display: block;}
+
+
+.dialog-layer {display: flex;flex-direction: column;gap: 40px;}
+.dialog-header,
+.dialog-contents,
+.dialog-footer {display: flex;align-items: center; justify-content: center;flex-direction: column; position: relative;}
+
+.dialog-header{position: relative;min-height: 40px;}
+.dialog-close-btn {
+	position: absolute;top: 0;right: -12px;width: 40px;height: 40px;
+	background: url('../images/common/icn_popup_close.svg') no-repeat 50% 50%;
+}
+
+/* dialog z-index */
+.dialog-backdrop {z-index: 999;}
+.dialog-wrap {z-index: 1000;}

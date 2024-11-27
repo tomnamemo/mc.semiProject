@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+
+/* result.html */
+main.ui-result {}
+main.ui-result section > article {flex-grow: 0;}
+
+main.ui-result .ui-form.result {width: 100%;background-color: var(--bg-02);}
+main.ui-result .ui-form.result .ux-button-bar {width: 180px;}
+main.ui-result .ui-form.result .ux-button-bar .ux-button{}
+
+main.ui-result .content.result {position: relative;flex-direction: row;justify-content: space-between;align-items: flex-start;}
+main.ui-result .content.result .res {display: flex;flex-direction: column;padding-top: 60px;}
+main.ui-result .content.result .res.r1 {flex-grow:0;flex-shrink:1;flex-basis:700px;}
+main.ui-result .content.result .res.r2 {flex-grow: 1;position: sticky; top: 60px;}
+
+.res.r1 .camp-list {display: flex;flex-direction: column;gap: 24px;}
+.res.r1 .camp-list .camp {display: flex;flex-wrap: wrap; gap: 24px;
+	width :720px; height: auto;padding: 12px;color: var(--fc-111);background-color: var(--bg-fff);
+	border-radius: 16px;border-left: 1px solid var(--line-02);box-shadow: 0 3px 6px rgba(25, 30, 36, 0.16), 0 -1px 4px rgba(25, 30, 36, 0.04);
+}
+
+.res.r1 .camp .item-image {width: 300px;max-width: 300px;height: auto;border-radius: 8px;overflow: hidden;}
+.res.r1 .camp .item-image .img {width: 100%;object-fit: cover;}
+
+.res.r1 .camp .item-info {flex:1;display: flex;flex-direction : column;flex-wrap:nowrap;}
+.res.r1 .camp .item-info .info-title {max-width: 230px;}
+.res.r1 .camp .item-info .info-grade {margin-top: 8px;font-size: 14px;color: var(--fc-888);}
+.res.r1 .camp .item-info .info-grade .score {font-size: 12px;font-weight: 400;padding: 2px 4px;margin-left: 4px;}
+
+.res.r1 .camp .item-detail {display: flex;flex-direction: column;justify-content: flex-end;padding-left: 12px;border-left: 1px solid var(--line-02);}
+.res.r1 .camp .item-detail .detail-price{text-align: right;}
+.res.r1 .camp .item-detail .ux-button-bar{margin-top: 12px;}
+.res.r1 .camp .item-detail .ux-button.reserv{height: 40px;}
+
+.res.r2 .map-wrap {width: 100%;}
+.res.r2 .map-wrap #map {top: 0px;width: 100%;height: 600px;min-height: 0;margin: auto;border-radius: 16px;}
+.res.r2 .data-desc {font-size: 14px;color:var(--fc-666);text-align: right;margin-top: 4px;}
+
+
+.peg_own{
+    border:20px;
+
+}
+
+.peg_own section{
+    margin:25px;
+}
+
+.search-area{
+    margin:auto;
+    min-height: 100px;
+}
+
+.link_block {
+    width:100%;
+    height: calc(20vh);
+    min-height:120px;
+
+    margin-bottom:50px;
+    border-radius: 2em;
+    border-style:solid;
+    border-width:2px;
+    border-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slidecontainer {
+    width: 100%;
+
+
+}
+
+.tmpgrid{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding:0px;
+
+}
+
+.result_visible_grid{
+    width:60%;
+    position: absolute;
+    max-width: 900px;
+    min-width: 300px;
+}
+
+.camp_image{
+    width:35%;
+    height: 100%;
+    border-radius: 1.5em 0 0 1.5em;
+    box-sizing: border-box;
+
+}
+
+.camp_image>img{
+    width:100%;
+    height: 100%;
+    border-radius: 1.75em 0 0 1.75em;
+    box-sizing: border-box;
+}
+
+.camp-info{
+    width:40%;
+    position: relative;
+}
+.camp-name{
+  padding:15px;
+    text-align: left;
+    height: 30%;
+    min-height: 100px;
+}
+
+.grade{
+  position: absolute;
+  left:20px;
+  bottom:20px;
+}
+
+.score{
+    color:white;
+    border-radius: 0.25em;
+    background-color: green;
+    text-align: center;
+}
+
+#map{
+     width:80%;
+    height: 80%;
+    min-height: 180px;
+    margin: auto;
+}
+
+
+.maparea{
+    position:fixed;
+    margin:20px;
+    right: 0%;
+    width:20%;
+    height: 12%;
+    background-color: #ccc;
+    min-height: 400px;
+
+    transform:translateY(-50%);
+}
+.bookarea{
+    width:25%;
+    position:relative;
+    border-left-style:solid;
+    border-left-width:2px;
+    border-left-color:black;
+    border-radius: 0 1.5em 1.5em 0;
+}
+
+.price{
+    position:absolute;
+    width:100%;
+    bottom: 20%;
+    text-align:center;
+}
+
+.book{
+    position:absolute;
+    font: size 20%;
+    background-color:#00986f;
+    color:white;
+    text-align: center;
+    border-radius: 0.5em;
+    width: 60%;
+    height:30%;
+    top: 30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+   margin:auto;
+}
+

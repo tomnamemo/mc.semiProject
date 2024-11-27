@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* 보라 css / Mobile버전 */
+main.ui-index {padding: 0 0 0 0;overflow: hidden;}
+main.ui-index section {min-height: 0;}
+main.ui-index section.has-slide {padding: 0;}
+main.ui-index section.has-slide article{width: 100%;height: calc(100dvh - 56px - 62px);}
+main.ui-index .ui-form.search {margin-top: 24px;}
+
+.main-swiper { position: relative;height: 100%;width: 100%;overflow: hidden;}
+.swiper-wrapper.main {display: flex;transition: transform 1s ease-in-out;}
+.swiper-slide {
+	position: absolute;
+	top: 0;left: 0;
+    width: 100%;
+	height: 100%;
+    background-size: cover;
+    background-position: center;
+	object-fit: cover;
+}
+.swiper-slide.main-slide-1 {background-image: url('../images/index_slides/main_slide_mob_1.jpg');}
+.swiper-slide.main-slide-2 {background-image: url('../images/index_slides/main_slide_mob_2.jpg');}
+.swiper-slide.main-slide-3 {background-image: url('../images/index_slides/main_slide_mob_3.jpg');}
+
+.overlay {
+    position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+	display: flex;flex-direction: column;justify-content: center;align-items: center;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 99;
+}
+
+.main-content {
+	display: flex;flex-direction: column;gap:32px;justify-content: space-between;
+	width: 100%;min-width:0;max-width: calc(100vw - 40px); width: auto;padding:0 20px;color: white;text-align: center;
+}
+
+.text-slide-list ul {gap:8px;}
+.text-slide-list ul li.desc{margin-top: 24px;}
+
+
+/* index.html .recommand-swiper */
+.recommand-swiper {width: 100%;}
+.swiper-slide.recommand-slide {width: 100%;position: relative;}
+
+main.ui-index .content.recommand {padding-bottom: 62px;}
+main.ui-index .content.recommand:hover {display: block;}
+
+.recommand-swiper .recommand {gap:16px;}
+.recommand-swiper .recommand .item-image {width: 100%;height: auto; max-height: 192px;}
+.recommand-swiper .recommand .item-image .img {width: 100%;object-fit: cover;}
+.recommand-swiper .recommand .item-detail .detail-price{text-align: right;}
+
+main.ui-detail section > article {gap: 32px;height: auto;}
+
+
+/* 추천캠핑장 상세보기 */
+main.ui-detail .content-title {flex-direction:column;gap: 12px;width: 100%;}
+main.ui-detail .content-title .item-info {gap: 8px;}
+main.ui-detail .content-title .item-detail {flex-direction: row;justify-content: space-between;align-items: center;}
+main.ui-detail .content-title .item-detail .detail-price{font-size: 1.25rem;}
+main.ui-detail .content-title .item-detail .ux-button.reserv{padding: 0 16px;}
+
+main.ui-detail .ui-photo-book {width: 100%; height: auto;border-radius: 0;overflow: hidden;}
+main.ui-detail .ui-photo-book ul {
+    display: flex; flex-direction : column; height: auto;gap: 12px;
+    grid-template-columns:none;grid-template-rows: none;
+}
+main.ui-detail .ui-photo-book li {height: 100%;border-radius: 16px;overflow: hidden;}
+main.ui-detail .ui-photo-book li:first-of-type {grid-column:none;}
+main.ui-detail .ui-photo-book li img{width: 100%;height: 100%;object-fit: cover;}
+
+main.ui-detail .text-list {width: 100%;display: flex;flex-wrap: wrap;}
+main.ui-detail .text-list li {flex-basis: 50%;padding: 4px 0 ;}
+main.ui-detail .text-list li:has(ul) {flex-basis: 100%;}
+main.ui-detail .text-list li ul{margin-top: 8px;}
+
+
+
+
+
+
+/* .ui-form search */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+.ui-input .input > .ui-selectmenu-button {height: 48px;padding: 0 18px;}
+
+.ui-form {flex-wrap: wrap;}
+.ui-form ul {gap: 16px;}
+
+.ui-form.search {padding:0;background-color: transparent;backdrop-filter:none;border-radius: 0;}
+.ui-form.search ul li {display: flex;flex-direction: column;flex-wrap: nowrap;gap: 16px;}
+.ui-form .field .label {flex-basis: 60px; padding: 14px 0;}
+.ui-form .field .label:not(.clipped) + .ui-input {margin-left: 12px;flex-grow:0;}
+.ui-form .field .ui-input {flex-grow: 1; flex-shrink: 1;flex-basis: auto;}
+.ui-form.search .field .in > .label {flex-grow: 0;flex-shrink: 0;flex-basis: 0; padding: 14px 0; color: var(--fc-333);}
+.ui-form.search .field .in > .ui-input {display: flex;flex-direction: column;width: 100%;flex-grow: 1; flex-shrink: 1;flex-basis: auto;}
+
+.ui-form.login ul li .ux-divider {margin: 4px 0 12px 0;}
+
+
+.ui-form.sign-up {width: 100%;}
+.ui-form.sign-up .field {flex-direction: column;justify-content: space-between;}
+.ui-form.sign-up .field .label {flex-basis: auto; padding:8px 0;}
+.ui-form.sign-up .field .label:not(.clipped) + .ui-input {margin-left: 0;width: 100%;}
+/* 회원가입 */
+main.ui-sign-up .content {justify-content: center;}
+main.ui-sign-up .ux-button-bar{width: 100%;margin-top: 24px;gap: 12px;}
+
+
+
+.ui-input .input.outlined {width: 100%;}
+.ui-input .inputs:not(.fromto-date)  {flex-direction: column;}
+.ui-selectmenu-menu .ui-menu .ui-menu-item{padding: 12px ;}
+.fromto-date input.datepicker {
+    width: auto;
+	min-width: 100px;
+    padding-right: 0;
+}
+.fromto-date input.datepicker input.has-datepicker:first-of-type .ui-datepicker-trigger {right: -8px;}
+
+input.ui-input {width: 100%;}
+.inputs.has-datepicker,
+.input.has-datepicker {display: flex;align-items: center;width: 100%;flex-wrap: wrap;}
+.fromto-date .datepicker {letter-spacing: 0.7rem;}
+.fromto-date .fromto {display: none;}
+.ui-widget.ui-datepicker {width: 300px;overflow: hidden;}
+.ui-datepicker .ui-datepicker-title {font-size: 18px;}
+.input.has-datepicker:first-of-type {position: relative;}
+.input.has-datepicker:first-of-type:after {display: block;position: absolute;left: 50%;bottom: -2px;width: 80%;height: 1px;border: 2px dotted var(--line-02);transform: translateX(-50%);content:'';z-index: 18;}
+
+.ux-divider {}
+
+/* dialog */
+.dialog-wrap {
+    position: fixed;
+    top: 0;left: 0;bottom: 0;right: 0; transform: none;
+	width: 100%;height: auto;padding: 24px;border-radius: 0;
+}
+.dialog-layer {gap: 32px;}
+.dialog-header,
+.dialog-contents,
+.dialog-footer {display: flex;align-items: center; justify-content: center;flex-direction: column; position: relative;}
+
+.dialog-header {min-height: 40px;}
+.dialog-header .dialog-close-btn {right: -8px;width: 36px;height: 36px;}
+
+.ux-button.social .label {font-weight: 400;}
+
+
