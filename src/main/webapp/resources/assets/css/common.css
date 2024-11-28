@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url("temp_kbr.css"); /*보라*/
-@import url("temp_psh.css"); /*성호*/
 @import url("temp_peg.css"); /*응규*/
 
 :root {
@@ -211,7 +210,7 @@ textarea {min-height: 170px;}
 .ux-button.contained.disabled {color: var(--fc-666);background-color: var(--contained-disabled);background-image: none;pointer-events: none;}
 .ux-button.contained.disabled:before {display: none;}
 
-/* signin dialog button */
+/* signin dialog button */ 
 .ux-button.social {justify-content: flex-start;}
 .ux-button.social .icon{width: 18px;height: 18px;}
 .ux-button.social .label{flex-grow: 1;text-align: center;}
@@ -222,15 +221,15 @@ textarea {min-height: 170px;}
 
 .ux-button.outlined.social .icon,
 .ux-button.contained.social .icon {background-size: contain;background-repeat: no-repeat; background-position: center center;}
-.ux-button.outlined.social.google .icon{background-image: url(/assets/images/login/google.png);}
-.ux-button.contained.social.naver .icon{background-image: url(/assets/images/login/naver.png);}
-.ux-button.contained.social.kakao .icon{background-image: url(/assets/images/login/kakao.png);}
+.ux-button.outlined.social.google .icon{background-image: url('../images/login/google.png');}
+.ux-button.contained.social.naver .icon{background-image: url('../images/login/naver.png');}
+.ux-button.contained.social.kakao .icon{background-image: url('../images/login/kakao.png');}
 
 .ux-button.text-button {height: 40px;}
 .ux-button.text-button .icon + .label:not(:empty),
 .ux-button.text-button .label + .icon {margin-left: 4px;}
 .ux-button.text-button .icon.rang { width: 16px;height: 16px; background: rgba(0, 0, 0, .8);
-	-webkit-mask-image: url("/assets/images/common/icn_rang_01.svg");-webkit-mask-repeat: no-repeat;-webkit-mask-position: 50% 50%;
+	-webkit-mask-image: url('../images/common/icn_rang_01.svg');-webkit-mask-repeat: no-repeat;-webkit-mask-position: 50% 50%;
 }
 
 

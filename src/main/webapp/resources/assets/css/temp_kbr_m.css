@@ -101,13 +101,13 @@ input[type="search"],
 .ui-form.login ul li .ux-divider {margin: 4px 0 12px 0;}
 
 
-.ui-form.sign-up {width: 100%;}
-.ui-form.sign-up .field {flex-direction: column;justify-content: space-between;}
-.ui-form.sign-up .field .label {flex-basis: auto; padding:8px 0;}
-.ui-form.sign-up .field .label:not(.clipped) + .ui-input {margin-left: 0;width: 100%;}
+.ui-form.sign {width: 100%;}
+.ui-form.sign .field {flex-direction: column;justify-content: space-between;}
+.ui-form.sign .field .label {flex-basis: auto; padding:8px 0;}
+.ui-form.sign .field .label:not(.clipped) + .ui-input {margin-left: 0;width: 100%;}
 /* 회원가입 */
-main.ui-sign-up .content {justify-content: center;}
-main.ui-sign-up .ux-button-bar{width: 100%;margin-top: 24px;gap: 12px;}
+main.ui-sign .content {justify-content: center;}
+main.ui-sign .ux-button-bar{width: 100%;margin-top: 24px;gap: 12px;}
 
 
 

@@ -12,7 +12,6 @@
 	<section class="footer-pc">
 		<article>
 			<div class="link-list">
-				<!-- 서브페이지 이동X (붙박이 장식요소)-->
 				<ul>
 					<li><a href="#" class="ux-link">회사소개</a></li>
 					<li><a href="#" class="ux-link">이용약관</a></li>

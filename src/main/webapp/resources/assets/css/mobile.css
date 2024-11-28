@@ -1,10 +1,5 @@
 @charset "utf-8";
-/* 모바일 버전 css */
-
-/* 개별 스타일 파일 임포트 - 추후 병합 */
 @import url("temp_kbr_m.css"); /*보라*/
-@import url("temp_psh_m.css"); /*성호*/
-@import url("temp_peg_m.css"); /*응규*/
 
 html,
 body {
@@ -47,15 +42,6 @@ main section .content {display: flex; flex-direction: column;}
 main section article {padding: 0;}
 main section > article {height: 100%;}
 main section > article > .content {flex-grow: 1;flex-shrink: 1;flex-basis: auto;gap:32px;}
-
-/* 영역 샘플 */
-.example-box {justify-content: center;flex-direction:column;gap: 20px;}
-.example-box .box{}
-.example-box.column {flex-direction: column;}
-.example-box.column .box {
-	display: flex;align-items:center;justify-content: center; width: 100%;min-height: 100px;
-	background-color: #aaa;
-}
 
 /* header pc용 | display:none */
 header section.header-pc1,

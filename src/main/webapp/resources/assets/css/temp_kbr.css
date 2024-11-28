@@ -113,7 +113,7 @@ main.ui-detail .text-list li ul{margin-top: 12px;font-size: .875rem;color: var(-
 
 .ui-form.search {padding:24px;background-color: rgba(255, 255, 255, .9);backdrop-filter: blur(10px); border-radius: 16px;}
 
-.ui-form.sign-up {width: 720px;}
+.ui-form.sign {width: 720px;}
 
 /* 회원가입 */
 main.ui-sign-up .content {justify-content: center;}

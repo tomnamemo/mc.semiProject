@@ -109,117 +109,26 @@
 				<h4>베스트 추천 캠핑장</h4>
 				<div class="swiper-container recommand-swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide recommand-slide s1">
-							<a class="recommand" href="/pages/detail.html">
-								<div class="item-image">
-									<img class="img"
-										src="/camp/resources/assets/images/camp/temp.jpg"
-										alt="캠핑장대표사진">
-								</div>
-								<div class="item-info">
-									<h4 class="info-title">1111가나다라마가나다캠핑장</h4>
-									<p class="info-location">
-										<span class="icon"></span><span class="label">강남, 서울</span>
-									</p>
-								</div>
-								<div class="item-detail">
-									<h5 class="detail-price">219,800원</h5>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide recommand-slide s2">
-							<a class="recommand" href="/pages/detail.html">
-								<div class="item-image">
-									<img class="img"
-										src="${contextPath}/resources/assets/images/camp/temp.jpg"
-										alt="캠핑장대표사진">
-								</div>
-								<div class="item-info">
-									<h4 class="info-title">2222가나다라마가나다캠핑장 다라마가나다캠핑장</h4>
-									<p class="info-location">
-										<span class="icon"></span><span class="label">강남, 서울</span>
-									</p>
-								</div>
-								<div class="item-detail">
-									<h5 class="detail-price">219,800원</h5>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide recommand-slide s3">
-							<a class="recommand" href="/pages/detail.html">
-								<div class="item-image">
-									<img class="img"
-										src="${contextPath}/resources/assets/images/camp/temp.jpg"
-										alt="캠핑장대표사진">
-								</div>
-								<div class="item-info">
-									<h4 class="info-title">3333가나다라마가나다캠핑장마가나다캠핑장</h4>
-									<p class="info-location">
-										<span class="icon"></span><span class="label">강남, 서울</span>
-									</p>
-								</div>
-								<div class="item-detail">
-									<h5 class="detail-price">219,800원</h5>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide recommand-slide s4">
-							<a class="recommand" href="/pages/detail.html">
-								<div class="item-image">
-									<img class="img"
-										src="${contextPath}/resources/assets/images/camp/temp.jpg"
-										alt="캠핑장대표사진">
-								</div>
-								<div class="item-info">
-									<h4 class="info-title">4444가나다라마가나다캠핑장</h4>
-									<p class="info-location">
-										<span class="icon"></span><span class="label">강남, 서울</span>
-									</p>
-								</div>
-								<div class="item-detail">
-									<h5 class="detail-price">219,800원</h5>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide recommand-slide s5">
-							<a class="recommand" href="/pages/detail.html">
-								<div class="item-image">
-									<img class="img"
-										src="${contextPath}/resources/assets/images/camp/temp.jpg"
-										alt="캠핑장대표사진">
-								</div>
-								<div class="item-info">
-									<h4 class="info-title">5555가나다라마가나다캠핑장</h4>
-									<p class="info-location">
-										<span class="icon"></span><span class="label">강남, 서울</span>
-									</p>
-								</div>
-								<div class="item-detail">
-									<h5 class="detail-price">219,800원</h5>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide recommand-slide s6">
-							<a class="recommand" href="/pages/detail.html">
-								<div class="item-image">
-									<img class="img"
-										src="${contextPath}/resources/assets/images/camp/temp.jpg"
-										alt="캠핑장대표사진">
-								</div>
-								<div class="item-info">
-									<h4 class="info-title">6666가나다라마가나다캠핑장</h4>
-									<p class="info-location">
-										<span class="icon"></span><span class="label">강남, 서울</span>
-									</p>
-								</div>
-								<div class="item-detail">
-									<h5 class="detail-price">219,800원</h5>
-								</div>
-							</a>
-						</div>
+						<c:forEach var="camp" items="${campList}">
+							<div class="swiper-slide recommand-slide">
+								<a class="recommand"
+									href="${contextPath}/pages/detail?id=${camp.id}">
+									<div class="item-image">
+										<img class="img" src="${contextPath}${camp.imageUrl}" alt="캠핑장대표사진">
+									</div>
+									<div class="item-info">
+										<h4 class="info-title">${camp.name}</h4>
+										<p class="info-location">
+											<span class="icon"></span><span class="label">${camp.location}</span>
+										</p>
+									</div>
+									<div class="item-detail">
+										<h5 class="detail-price">${camp.price}원</h5>
+									</div>
+								</a>
+							</div>
+						</c:forEach>
 					</div>
-					<!-- <div class="swiper-button-next"></div>
-        					<div class="swiper-button-prev"></div> -->
 				</div>
 			</div>
 		</article>

@@ -65,6 +65,7 @@ const publish = (function () {
 			common.setDevice();
 			common.setSwiperSlide();
 			common.setDatepicker();
+			common.setAside();
 			common.setSelect();
 			common.setTextAnimate();
 		},
@@ -88,8 +89,9 @@ const publish = (function () {
 			if (_device.isNotPC) {
 				const $body = $("body");
 				const $aside = $("aside");
-				const $buttonMenu = $(".button-menu");
+				const $buttonMenu = $(".button-menu.open-menu");
 				$buttonMenu.on("click", function () {
+					console.log("눌렀냐")
 					$body.toggleClass("ovy-hidden");
 					$aside.toggleClass("active", $(this).hasClass("open-menu"));
 				});

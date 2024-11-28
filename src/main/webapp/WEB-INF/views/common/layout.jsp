@@ -19,43 +19,31 @@
 	<script type="text/javascript" src="${contextPath}/resources/lib/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="${contextPath}/resources/lib/jquery-ui-1.12.1.min.js"></script>
 	
-	
-	
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
     
 	<script type="text/javascript">var contextPath = "${contextPath}";</script>
 	
 	<script type="text/javascript" src="${contextPath}/resources/js/common.js"></script>
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-      #container {
-     
-      }
-      #header {
- 
-      }
-      #sidebar-left {
-
-      }
-      #content {
-     
-      }
-      #footer {
-        border: 1px solid red;
-
-      }
-      
+      #container {}
+      #header {}
+      #aside {}
+      #content {}
+      #footer {}
     </style>
-    <title><tiles:insertAttribute name="title" /></title>
+   <title><tiles:insertAttribute name="title" /></title>
+    
   </head>
     <body>
     <div id="container">
       <div id="header">
          <tiles:insertAttribute name="header"/>
       </div>
-      <div id="sidebar-left">
-          <tiles:insertAttribute name="side"/> 
-      </div>
+      <aside id="aside">
+          <tiles:insertAttribute name="aside"/> 
+      </aside>
       <div id="content">
           <tiles:insertAttribute name="body"/>
       </div>
