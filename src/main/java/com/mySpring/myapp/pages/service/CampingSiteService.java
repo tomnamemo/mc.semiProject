@@ -1,10 +1,11 @@
 package com.mySpring.myapp.pages.service;
 
-import com.mySpring.myapp.pages.vo.CampingSiteVO;
-
 import java.util.List;
 
+import com.mySpring.myapp.pages.vo.CampingSiteVO;
+
 public interface CampingSiteService {
-    List<CampingSiteVO> getCampingSites();
-    CampingSiteVO getCampingSiteById(int id);
+    List<CampingSiteVO> listCampingSites();
+    void addCampingSite(CampingSiteVO campingSite);
+    void removeCampingSite(int id);
 }

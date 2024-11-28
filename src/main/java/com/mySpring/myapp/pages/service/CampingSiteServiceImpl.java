@@ -1,26 +1,31 @@
 package com.mySpring.myapp.pages.service;
 
-import com.mySpring.myapp.pages.dao.CampingSiteDAO;
-import com.mySpring.myapp.pages.vo.CampingSiteVO;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.mySpring.myapp.pages.dao.CampingSiteDAO;
+import com.mySpring.myapp.pages.vo.CampingSiteVO;
 
-@Service
+@Service("campingSiteService")
 public class CampingSiteServiceImpl implements CampingSiteService {
 
     @Autowired
     private CampingSiteDAO campingSiteDAO;
 
     @Override
-    public List<CampingSiteVO> getCampingSites() {
-        return campingSiteDAO.getCampingSites();
+    public List<CampingSiteVO> listCampingSites() {
+        return campingSiteDAO.selectAllCampingSites();
     }
 
     @Override
-    public CampingSiteVO getCampingSiteById(int id) {
-        return campingSiteDAO.getCampingSiteById(id);
+    public void addCampingSite(CampingSiteVO campingSite) {
+        campingSiteDAO.insertCampingSite(campingSite);
+    }
+
+    @Override
+    public void removeCampingSite(int id) {
+        campingSiteDAO.deleteCampingSite(id);
     }
 }
- 

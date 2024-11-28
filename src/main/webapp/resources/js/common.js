@@ -86,16 +86,21 @@ const publish = (function () {
 		
 		setAside: function () {
 			// 모바일 전체메뉴 오픈
-			if (_device.isNotPC) {
 				const $body = $("body");
 				const $aside = $("aside");
 				const $buttonMenu = $(".button-menu.open-menu");
+			const $asideCloseBtn = $(".button-menu.button-close");
+			if (_device.isNotPC) {
 				$buttonMenu.on("click", function () {
 					console.log("눌렀냐")
 					$body.toggleClass("ovy-hidden");
 					$aside.toggleClass("active", $(this).hasClass("open-menu"));
 				});
 			}
+				$asideCloseBtn.off("click").on("click", function () {
+					console.log("닫아라!")
+						$aside.toggleClass("active", $(this).hasClass("open-menu"));
+				});
 		},
 
 		setDialog: function () {
@@ -156,12 +161,13 @@ const publish = (function () {
 			});
 			var swiper2 = new Swiper(".recommand-swiper", {
 				slidesPerView: _device.isNotPC ? 1 : 3,
+				slidesPerGroup: 1,
 				spaceBetween: _device.isNotPC ? 0 : 20,
 				autoplay: {
 					delay: 5000,
 					disableOnInteraction: false,
 				},
-				loop: true,
+				//loop: true,
 			});
 		},
 		setTextAnimate: function () {

@@ -1,16 +1,26 @@
 package com.mySpring.myapp.pages.vo;
 
+import org.springframework.stereotype.Component;
+
+@Component("campingSiteVO") // bean 생성
 public class CampingSiteVO {
-    private int id;            // 캠핑장 ID
-    private String name;       // 캠핑장 이름
-    private String location;   // 캠핑장 위치
-    private String imageUrl;   // 캠핑장 이미지 URL
-    private int price;         // 캠핑장 가격
+    private int id;
+    private String name;
+    private String location;
+    private String image_url;
+    private int price;
 
-    // 기본 생성자
-    public CampingSiteVO() {}
+    public CampingSiteVO() {
+    }
 
-    // Getter와 Setter 메소드
+    public CampingSiteVO(int id, String name, String location, String image_url, int price) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.image_url = image_url;
+        this.price = price;
+    }
+
     public int getId() {
         return id;
     }
@@ -36,11 +46,11 @@ public class CampingSiteVO {
     }
 
     public String getImageUrl() {
-        return imageUrl;
+        return image_url;
     }
 
     public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+        this.image_url = image_url;
     }
 
     public int getPrice() {

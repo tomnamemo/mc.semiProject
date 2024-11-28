@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
-  request.setCharacterEncoding("UTF-8");
+request.setCharacterEncoding("UTF-8");
 %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
@@ -107,27 +107,65 @@
 		<article>
 			<div class="content recommand">
 				<h4>베스트 추천 캠핑장</h4>
+				<a href="${contextPath}/pages/detail.do? ">화면이동</a>
+				<c:if test="${not empty campList}">
+					<c:forEach var="camp" items="${campList}">
+						<div>${camp.name}- ${camp.location} - ${camp.price}원</div>
+						<!-- 모든 데이터 출력 -->
+					</c:forEach>
+				</c:if>
+				<c:if test="${empty campList}">
+					<div>데이터가 없습니다.</div>
+					<!-- 데이터가 없을 경우 표시 -->
+				</c:if>
 				<div class="swiper-container recommand-swiper">
 					<div class="swiper-wrapper">
-						<c:forEach var="camp" items="${campList}">
-							<div class="swiper-slide recommand-slide">
-								<a class="recommand"
-									href="${contextPath}/pages/detail?id=${camp.id}">
-									<div class="item-image">
-										<img class="img" src="${contextPath}${camp.imageUrl}" alt="캠핑장대표사진">
-									</div>
-									<div class="item-info">
-										<h4 class="info-title">${camp.name}</h4>
-										<p class="info-location">
-											<span class="icon"></span><span class="label">${camp.location}</span>
-										</p>
-									</div>
-									<div class="item-detail">
-										<h5 class="detail-price">${camp.price}원</h5>
-									</div>
-								</a>
-							</div>
-						</c:forEach>
+					<!-- 
+						<c:if test="${not empty campList}">
+							<c:forEach var="camp" items="${campList}">
+								<div class="swiper-slide recommand-slide">
+									<a class="recommand"
+										href="${contextPath}/pages/detail?id=${camp.id}">
+										<div class="item-image">
+											<img class="img" src="/camp/${camp.id}" alt="캠핑장대표사진">
+										</div>
+										<div class="item-info">
+											<h4 class="info-title">${camp.name}</h4>
+											<p class="info-location">
+												<span class="icon"></span><span class="label">${camp.location}</span>
+											</p>
+										</div>
+										<div class="item-detail">
+											<h5 class="detail-price">${camp.price}원</h5>
+										</div>
+									</a>
+								</div>
+							</c:forEach>
+						</c:if> --> 
+
+						<c:if test="${fn:length(campList) < 3}">
+							<c:forEach var="i" begin="0" end="${2 - fn:length(campList)}">
+								<div class="swiper-slide recommand-slide">
+									<a class="recommand" href="#">
+										<div class="item-image">
+											<img class="img"
+												src="${contextPath}/resources/assets/images/camp/default.jpg"
+												alt="기본 이미지">
+										</div>
+										<div class="item-info">
+											<h4 class="info-title">캠핑장이름</h4>
+											<p class="info-location">
+												<span class="icon"></span><span class="label">위치 정보
+													없음</span>
+											</p>
+										</div>
+										<div class="item-detail">
+											<h5 class="detail-price">0원</h5>
+										</div>
+									</a>
+								</div>
+							</c:forEach>
+						</c:if>
 					</div>
 				</div>
 			</div>

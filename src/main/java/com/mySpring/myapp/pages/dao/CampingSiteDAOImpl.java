@@ -1,65 +1,35 @@
 package com.mySpring.myapp.pages.dao;
 
-import com.mySpring.myapp.pages.vo.CampingSiteVO;
-
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Repository;
+
+import com.mySpring.myapp.pages.vo.CampingSiteVO;
+
+@Repository("campingSiteDAO")
 public class CampingSiteDAOImpl implements CampingSiteDAO {
-    private DataSource dataSource;
+    @Autowired
+    private SqlSession sqlSession;
 
-    public CampingSiteDAOImpl(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    public List<CampingSiteVO> getCampingSites() {
-        List<CampingSiteVO> campingSites = new ArrayList<>();
-        String sql = "SELECT * FROM camping_sites"; // 테이블 이름 수정
-
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql);
-             ResultSet rs = pstmt.executeQuery()) {
-
-            while (rs.next()) {
-                CampingSiteVO site = new CampingSiteVO();
-                site.setId(rs.getInt("id"));
-                site.setName(rs.getString("name"));
-                site.setLocation(rs.getString("location"));
-                site.setImageUrl(rs.getString("image_url"));
-                site.setPrice(rs.getInt("price"));
-                campingSites.add(site);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return campingSites;
+    @Override
+    public List<CampingSiteVO> selectAllCampingSites() throws DataAccessException {
+        List<CampingSiteVO> campingSitesList = null;
+        campingSitesList = sqlSession.selectList("mapper.pages.selectAllCampingSites");
+        return campingSitesList;
     }
 
     @Override
-    public CampingSiteVO getCampingSiteById(int id) {
-        CampingSiteVO site = null;
-        String sql = "SELECT * FROM camping_sites WHERE id = ?"; // 테이블 이름 수정
+    public int insertCampingSite(CampingSiteVO campingSiteVO) throws DataAccessException {
+        int result = sqlSession.insert("mapper.pages.insertCampingSite", campingSiteVO);
+        return result;
+    }
 
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, id);
-            ResultSet rs = pstmt.executeQuery();
-            if (rs.next()) {
-                site = new CampingSiteVO();
-                site.setId(rs.getInt("id"));
-                site.setName(rs.getString("name"));
-                site.setLocation(rs.getString("location"));
-                site.setImageUrl(rs.getString("image_url"));
-                site.setPrice(rs.getInt("price"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return site;
+    @Override
+    public int deleteCampingSite(int id) throws DataAccessException {
+        int result = sqlSession.delete("mapper.pages.deleteCampingSite", id);
+        return result;
     }
 }
