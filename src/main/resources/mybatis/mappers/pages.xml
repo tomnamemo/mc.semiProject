@@ -8,9 +8,15 @@
     <resultMap id="campingSiteResult" type="com.mySpring.myapp.pages.vo.CampingSiteVO">
         <result property="id" column="id" />
         <result property="name" column="name" />
-        <result property="location" column="location" />
-        <result property="image_url" column="image_url" />
+        <result property="type" column="type" />
+        <result property="shortDesc" column="shortDesc" />
+        <result property="intro" column="intro" />
+        <result property="loc" column="loc" />
+        <result property="address" column="address" />
+        <result property="custPhone" column="custPhone" />
+        <result property="repImage" column="repImage" />
         <result property="price" column="price" />
+        <result property="reserUrl" column="reserUrl" />
     </resultMap>
 
     <select id="selectAllCampingSites" resultMap="campingSiteResult">
@@ -18,11 +24,17 @@
             SELECT * FROM camping_sites ORDER BY id ASC
         ]]>
     </select>
+    
+    <select id="selectCampingSiteById" parameterType="int" resultMap="campingSiteResult">
+        <![CDATA[
+            SELECT * FROM camping_sites WHERE id = #{id}
+        ]]>
+    </select>
 
     <insert id="insertCampingSite" parameterType="com.mySpring.myapp.pages.vo.CampingSiteVO">
         <![CDATA[
-            INSERT INTO camping_sites(name, location, image_url, price)
-            VALUES(#{name}, #{location}, #{image_url}, #{price})
+            INSERT INTO camping_sites(name, type, shortDesc, intro, loc, address, custPhone, repImage, price, reserUrl)
+            VALUES(#{name}, #{type}, #{shortDesc}, #{intro}, #{loc}, #{address}, #{custPhone}, #{repImage}, #{price}, #{reserUrl})
         ]]>
     </insert>
 

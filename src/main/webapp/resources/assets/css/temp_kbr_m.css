@@ -59,7 +59,9 @@ main.ui-detail .content-title .item-info {gap: 8px;}
 main.ui-detail .content-title .item-detail {flex-direction: row;justify-content: space-between;align-items: center;}
 main.ui-detail .content-title .item-detail .detail-price{font-size: 1.25rem;}
 main.ui-detail .content-title .item-detail .ux-button.reserv{padding: 0 16px;}
-
+.text-type {font-size: .875rem;}
+.text-intro {font-size: 1rem;padding-right: 16px;}
+.text-intro span {}
 main.ui-detail .ui-photo-book {width: 100%; height: auto;border-radius: 0;overflow: hidden;}
 main.ui-detail .ui-photo-book ul {
     display: flex; flex-direction : column; height: auto;gap: 12px;
@@ -92,6 +94,9 @@ input[type="search"],
 
 .ui-form.search {padding:0;background-color: transparent;backdrop-filter:none;border-radius: 0;}
 .ui-form.search ul li {display: flex;flex-direction: column;flex-wrap: nowrap;gap: 16px;}
+/* 모디 */
+.ui-form.search ul li.modi {}
+.ui-form.search ul li.modi .ux-button-bar{flex-basis: auto;}
 .ui-form .field .label {flex-basis: 60px; padding: 14px 0;}
 .ui-form .field .label:not(.clipped) + .ui-input {margin-left: 12px;flex-grow:0;}
 .ui-form .field .ui-input {flex-grow: 1; flex-shrink: 1;flex-basis: auto;}

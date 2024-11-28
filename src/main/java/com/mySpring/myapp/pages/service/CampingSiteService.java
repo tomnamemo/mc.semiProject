@@ -8,4 +8,5 @@ public interface CampingSiteService {
     List<CampingSiteVO> listCampingSites();
     void addCampingSite(CampingSiteVO campingSite);
     void removeCampingSite(int id);
+	CampingSiteVO getCampingSiteById(int id);
 }

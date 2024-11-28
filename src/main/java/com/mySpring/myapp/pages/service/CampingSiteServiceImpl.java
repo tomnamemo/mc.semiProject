@@ -20,10 +20,15 @@ public class CampingSiteServiceImpl implements CampingSiteService {
     }
 
     @Override
+    public CampingSiteVO getCampingSiteById(int id) {
+        return campingSiteDAO.selectCampingSiteById(id); //
+    }
+    
+    @Override
     public void addCampingSite(CampingSiteVO campingSite) {
         campingSiteDAO.insertCampingSite(campingSite);
     }
-
+ 
     @Override
     public void removeCampingSite(int id) {
         campingSiteDAO.deleteCampingSite(id);

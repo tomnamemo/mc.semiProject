@@ -8,4 +8,5 @@ public interface CampingSiteDAO {
     List<CampingSiteVO> selectAllCampingSites();
     int insertCampingSite(CampingSiteVO campingSiteVO);
     int deleteCampingSite(int id);
+    CampingSiteVO selectCampingSiteById(int id);
 }

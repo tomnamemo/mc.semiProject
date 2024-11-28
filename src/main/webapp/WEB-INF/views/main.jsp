@@ -31,7 +31,7 @@ request.setCharacterEncoding("UTF-8");
 								<form class="ui-form search">
 									<fieldset>
 										<ul>
-											<li>
+											<li class="modi">
 												<div class="field search">
 													<label class="label clipped" for="search_camp_name">캠핑장
 														이름 입력</label>
@@ -43,8 +43,12 @@ request.setCharacterEncoding("UTF-8");
 														</div>
 													</div>
 												</div>
+												<!-- 241129 세미 변경 -->
+												<div class="ux-button-bar">
+													<button class="ux-button contained primary"><span class="label">검색</span></button>
+												</div>
 											</li>
-											<li>
+											<!-- <li>
 												<div class="field">
 													<label class="label clipped">지역 / 날짜 선택</label>
 													<div class="ui-input">
@@ -91,7 +95,7 @@ request.setCharacterEncoding("UTF-8");
 														<span class="label">검색</span>
 													</button>
 												</div>
-											</li>
+											</li> -->
 										</ul>
 									</fieldset>
 								</form>
@@ -107,32 +111,20 @@ request.setCharacterEncoding("UTF-8");
 		<article>
 			<div class="content recommand">
 				<h4>베스트 추천 캠핑장</h4>
-				<a href="${contextPath}/pages/detail.do? ">화면이동</a>
-				<c:if test="${not empty campList}">
-					<c:forEach var="camp" items="${campList}">
-						<div>${camp.name}- ${camp.location} - ${camp.price}원</div>
-						<!-- 모든 데이터 출력 -->
-					</c:forEach>
-				</c:if>
-				<c:if test="${empty campList}">
-					<div>데이터가 없습니다.</div>
-					<!-- 데이터가 없을 경우 표시 -->
-				</c:if>
 				<div class="swiper-container recommand-swiper">
 					<div class="swiper-wrapper">
-					<!-- 
 						<c:if test="${not empty campList}">
 							<c:forEach var="camp" items="${campList}">
 								<div class="swiper-slide recommand-slide">
 									<a class="recommand"
-										href="${contextPath}/pages/detail?id=${camp.id}">
+										href="${contextPath}/pages/detail.do?id=${camp.id}">
 										<div class="item-image">
-											<img class="img" src="/camp/${camp.id}" alt="캠핑장대표사진">
+											<img class="img" src="${contextPath}${camp.repImage}" alt="캠핑장대표사진">
 										</div>
 										<div class="item-info">
 											<h4 class="info-title">${camp.name}</h4>
 											<p class="info-location">
-												<span class="icon"></span><span class="label">${camp.location}</span>
+												<span class="icon"></span><span class="label">${camp.loc}</span>
 											</p>
 										</div>
 										<div class="item-detail">
@@ -141,8 +133,8 @@ request.setCharacterEncoding("UTF-8");
 									</a>
 								</div>
 							</c:forEach>
-						</c:if> --> 
-
+						</c:if>
+						<!--
 						<c:if test="${fn:length(campList) < 3}">
 							<c:forEach var="i" begin="0" end="${2 - fn:length(campList)}">
 								<div class="swiper-slide recommand-slide">
@@ -165,7 +157,7 @@ request.setCharacterEncoding("UTF-8");
 									</a>
 								</div>
 							</c:forEach>
-						</c:if>
+						</c:if> -->
 					</div>
 				</div>
 			</div>

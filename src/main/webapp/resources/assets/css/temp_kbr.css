@@ -57,7 +57,7 @@ main.ui-detail .map-wrap #map {width: 100%;height: 500px;}
 .recommand-swiper .recommand {display: flex;flex-direction: column;gap:20px;}
 
 .recommand-swiper .recommand .item-image {width: 360px;height: 216px;max-height: 216px;border-radius: 8px;overflow: hidden;transition: all 0.3s ease-in-out;}
-.recommand-swiper .recommand .item-image .img {width: 100%;object-fit: cover;transition: all 0.3s ease-in-out;}
+.recommand-swiper .recommand .item-image .img {width: 100%;height: 100%;object-fit: cover;transition: all 0.3s ease-in-out;}
 .recommand-swiper .recommand:hover .item-image .img {transform: scale(1.2);}
 
 .recommand-swiper .recommand .item-info {flex:1;display: flex;flex-direction : column;flex-wrap:nowrap;}
@@ -77,17 +77,25 @@ main.ui-detail .content-title .tel{color: var(--primary-green)}
 main.ui-detail .content-title .item-info ,
 main.ui-detail .content-title .item-detail {display: flex;flex-direction: column;gap: 16px;}-detail .content .content-title .item-info {}
 main.ui-detail .content-title .item-info .info-location{font-size: .875rem;}
+main.ui-detail .content-title .item-info .info-shortdesc{color: var(--fc-333);}
 main.ui-detail .content-title .item-detail{text-align: right;}
 main.ui-detail .content-title .item-detail .detail-price{font-size: 1.5rem;}
+.text-type {color:var(--fc-666);}
+.text-intro {font-size: 1.2rem;}
+.text-intro span {font-size: .875rem;color: var(--fc-333);}
 
 main.ui-detail .ui-photo-book {width: 100%; height: auto;border-radius: 16px;overflow: hidden;}
 main.ui-detail .ui-photo-book ul {
     display: grid;height: auto;gap: 12px;
     grid-template-columns: calc(50% - 6px) calc(25% - 6px) calc(25% - 6px);grid-template-rows: calc(50% - 6px) calc(50% - 6px);
 }
+/* 세이브 */
 main.ui-detail .ui-photo-book li {height: 100%;overflow: hidden;}
 main.ui-detail .ui-photo-book li:first-of-type {grid-column: 1 /2;grid-row: 1 / 3;}
 main.ui-detail .ui-photo-book li img{width: 100%;height: 100%;object-fit: cover;}
+/* 모디 */
+main.ui-detail .modi-photo-book {width: 100%; height: auto;border-radius: 16px;overflow: hidden;}
+main.ui-detail .modi-photo-book img {width: 100%;height: 100%;object-fit: cover;}
 
 main.ui-detail .text-list {width: 100%;display: flex;flex-wrap: wrap;}
 main.ui-detail .text-list li {flex-basis: 50%;padding: 4px 0 ;}
@@ -100,6 +108,9 @@ main.ui-detail .text-list li ul{margin-top: 12px;font-size: .875rem;color: var(-
 .ui-form {}
 .ui-form ul {display: flex;flex-direction: column;gap: 20px;}
 .ui-form ul li {display: flex;flex-wrap: nowrap;gap: 16px;}
+/* 모디 */
+.ui-form ul li.modi {}
+.ui-form ul li.modi .ux-button-bar{flex-basis: 180px;}
 .ui-form ul li .field {flex-grow:1;flex-shrink: 1; flex-basis: auto;}
 .ui-form .field {display: flex; align-items: flex-start;}
 .ui-form .field .label {flex-grow: 0;flex-shrink: 0;flex-basis: 120px; padding: 14px 0; color: var(--fc-333);}

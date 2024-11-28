@@ -9,29 +9,33 @@ main.ui-result .ui-form.result {width: 100%;background-color: var(--bg-02);}
 main.ui-result .ui-form.result .ux-button-bar {width: 180px;}
 main.ui-result .ui-form.result .ux-button-bar .ux-button{}
 
+main.ui-result .content_loading{display: flex;flex-direction: column;padding-top: 60px;}
 main.ui-result .content.result {position: relative;flex-direction: row;justify-content: space-between;align-items: flex-start;}
 main.ui-result .content.result .res {display: flex;flex-direction: column;padding-top: 60px;}
-main.ui-result .content.result .res.r1 {flex-grow:0;flex-shrink:1;flex-basis:700px;}
+main.ui-result .content.result .res.r1 {flex-grow:0;flex-shrink:1;flex-basis:1120px;}
 main.ui-result .content.result .res.r2 {flex-grow: 1;position: sticky; top: 60px;}
 
 .res.r1 .camp-list {display: flex;flex-direction: column;gap: 24px;}
 .res.r1 .camp-list .camp {display: flex;flex-wrap: wrap; gap: 24px;
-	width :720px; height: auto;padding: 12px;color: var(--fc-111);background-color: var(--bg-fff);
+	width :1120px; height: auto;padding: 12px;color: var(--fc-111);background-color: var(--bg-fff);
 	border-radius: 16px;border-left: 1px solid var(--line-02);box-shadow: 0 3px 6px rgba(25, 30, 36, 0.16), 0 -1px 4px rgba(25, 30, 36, 0.04);
 }
 
-.res.r1 .camp .item-image {width: 300px;max-width: 300px;height: auto;border-radius: 8px;overflow: hidden;}
-.res.r1 .camp .item-image .img {width: 100%;object-fit: cover;}
+.res.r1 .camp .item-image {width: 300px;max-width: 300px;height: auto;min-height: 200px; max-height: 200px; border-radius: 8px;overflow: hidden;}
+.res.r1 .camp .item-image .img {width: 100%;height: 100%;object-fit: cover;}
 
 .res.r1 .camp .item-info {flex:1;display: flex;flex-direction : column;flex-wrap:nowrap;}
 .res.r1 .camp .item-info .info-title {max-width: 230px;}
 .res.r1 .camp .item-info .info-grade {margin-top: 8px;font-size: 14px;color: var(--fc-888);}
 .res.r1 .camp .item-info .info-grade .score {font-size: 12px;font-weight: 400;padding: 2px 4px;margin-left: 4px;}
 
-.res.r1 .camp .item-detail {display: flex;flex-direction: column;justify-content: flex-end;padding-left: 12px;border-left: 1px solid var(--line-02);}
+/* .res.r1 .camp .item-detail {display: flex;flex-direction: column;justify-content: flex-end;padding-left: 12px;border-left: 1px solid var(--line-02);} */
+.res.r1 .camp .item-detail {display: flex;flex-direction: column;justify-content: flex-end;}
 .res.r1 .camp .item-detail .detail-price{text-align: right;}
-.res.r1 .camp .item-detail .ux-button-bar{margin-top: 12px;}
-.res.r1 .camp .item-detail .ux-button.reserv{height: 40px;}
+/* .res.r1 .camp .item-detail .ux-button-bar{margin-top: 12px; height:175px;} */
+.res.r1 .camp .item-detail .ux-button-bar{flex-grow: 1;}
+/* .res.r1 .camp .item-detail .ux-button.reserv{height: 90px;} */
+.res.r1 .camp .item-detail .ux-button.reserv{height: 100%;}
 
 .res.r2 .map-wrap {width: 100%;}
 .res.r2 .map-wrap #map {top: 0px;width: 100%;height: 600px;min-height: 0;margin: auto;border-radius: 16px;}
@@ -178,4 +182,80 @@ main.ui-result .content.result .res.r2 {flex-grow: 1;position: sticky; top: 60px
     transform: translate(-50%, -50%);
    margin:auto;
 }
+
+.lds-grid {
+    /* change color here */
+    color: #1c4c5b
+  }
+  .lds-grid,
+  .lds-grid div {
+    box-sizing: border-box;
+  }
+  .lds-grid {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: lds-grid 1.2s linear infinite;
+  }
+  .lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+  }
+  .lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+  }
+  .lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+  }
+  .lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+  }
+  .lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+  }
+  .lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+  }
+  @keyframes lds-grid {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
 

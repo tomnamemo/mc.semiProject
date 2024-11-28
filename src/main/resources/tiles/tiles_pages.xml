@@ -12,7 +12,8 @@
 
 
    <definition name="/pages/detail" extends="baseLayout">
-      <put-attribute name="title" value="상세정보" />
+      <put-attribute name="title" value="캠핑상세정보" />
       <put-attribute name="body" value="/WEB-INF/views/pages/detail.jsp" />
-   </definition>
+   </definition> 
+   
 </tiles-definitions>
