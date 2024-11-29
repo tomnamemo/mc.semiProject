@@ -52,7 +52,7 @@ request.setCharacterEncoding("UTF-8");
 					<ul id="itemgrid" class="camp-list">
 						<li id="camp0" class="camp">
 							<div class="item-image">
-								<img class="img" src="/assets/images/camp/temp.jpg"
+								<img class="img" src="${contextPath}/resources/assets/images/camp/temp.jpg"
 									alt="캠핑장대표사진">
 							</div>
 							<div class="item-info">

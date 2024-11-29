@@ -1,21 +1,16 @@
 $(function () {
   var org = $("#camp0");
-  var val_name = localStorage.getItem("campName");
-  console.log(val_name);
- // var val_prov = localStorage.getItem("provName");
+  var val_name = sessionStorage.getItem("campName");
+  console.log(sessionStorage.getItem("campName"));
   document.getElementById("search_camp_name").value = val_name;
   $("#search_camp_name").on("propertychange change paste input", function () {
     val_name = $("#search_camp_name").val();
-      console.log(val_name);
+
   });
 
-  //$("#search_prov_name").on("selectmenuchange", function () {
-  //  val_prov = $("#search_prov_name").val();
-  //});
 
   $("#camp_searching_button").click(function () {
-    localStorage.setItem("campName", val_name);
-  //  localStorage.setItem("provName", val_prov);
+    sessionStorage.setItem("campName", val_name);
   });
 
   org.hide();

@@ -58,12 +58,7 @@ let _device = {};
 		if (e.which == 13) $(e.target).trigger("enter");
 	});
 	
-		var val_name = "";
-	$("#search_camp_name").change( function () {
-		val_name = $("#search_camp_name").val();
-		console.log(val_name);
-	  });
-	
+
 })(jQuery);
 
 const publish = (function () {
@@ -304,4 +299,12 @@ const publish = (function () {
 
 $(function () {
 	publish.init();
+	var val_name = "";
+  $("#search_camp_name").on("propertychange change paste input", function () {
+    val_name = $("#search_camp_name").val();
+	 sessionStorage.setItem("campName",    val_name );
+
+  });
+
+	
 });
