@@ -108,7 +108,8 @@ request.setCharacterEncoding("UTF-8");
 		</article>
 	</section>
 	
-	<c:if test="${not empty sessionScope.member}">
+	<c:choose>
+    <c:when test="${isLogOn == true && member != null}">
 	<!-- 로그인한 회원에게만 베스트 추천 캠핑장 노출 -->
 	<section>
 		<article>
@@ -166,5 +167,6 @@ request.setCharacterEncoding("UTF-8");
 			</div>
 		</article>
 	</section>
-	</c:if>
+	</c:when>
+	</c:choose>
 </main>
