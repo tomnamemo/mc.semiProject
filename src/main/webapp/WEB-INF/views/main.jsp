@@ -45,7 +45,8 @@ request.setCharacterEncoding("UTF-8");
 												</div>
 												<!-- 241129 세미 변경 -->
 												<div class="ux-button-bar">
-													<button class="ux-button contained primary"><span class="label">검색</span></button>
+													<a class="ux-button contained primary" href="${contextPath}/pages/listCampingSites.do">
+																<span class="label">검색</span></a>		
 												</div>
 											</li>
 											<!-- <li>

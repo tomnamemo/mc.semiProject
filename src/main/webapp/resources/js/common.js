@@ -57,6 +57,13 @@ let _device = {};
 	$(document).on("keyup", function (e) {
 		if (e.which == 13) $(e.target).trigger("enter");
 	});
+	
+		var val_name = "";
+	$("#search_camp_name").change( function () {
+		val_name = $("#search_camp_name").val();
+		console.log(val_name);
+	  });
+	
 })(jQuery);
 
 const publish = (function () {
