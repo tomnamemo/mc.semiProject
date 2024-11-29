@@ -6,7 +6,7 @@
 <%
 request.setCharacterEncoding("UTF-8");
 %>
-<main>
+<main class="ui-sign">
 	<section>
 		<article>
 			<c:choose>

@@ -4,7 +4,8 @@
 main.ui-index {}
 main.ui-index  section > article { overflow: hidden;}
 
-main.ui-index section.has-slide {padding: 0;height: 100dvh;}
+main.ui-index section:only-of-type {margin-top: 0;}
+main.ui-index section.has-slide {padding: 0;margin-top: 0;height: 100dvh;}
 main.ui-index section.has-slide article{width: 100%;height: calc(100vh - 80px);}
 main.ui-index .ui-form.search {margin-top: 40px;}
 
@@ -127,8 +128,8 @@ main.ui-detail .text-list li ul{margin-top: 12px;font-size: .875rem;color: var(-
 .ui-form.sign {width: 720px;}
 
 /* 회원가입 */
-main.ui-sign-up .content {justify-content: center;}
-main.ui-sign-up .ux-button-bar{margin-top: 40px;}
+main.ui-sign .content {justify-content: center;}
+main.ui-sign .ux-button-bar{margin-top: 40px;}
 
 
 
@@ -285,3 +286,5 @@ body.dialog-active .dialog-wrap{display: block;}
 /* dialog z-index */
 .dialog-backdrop {z-index: 999;}
 .dialog-wrap {z-index: 1000;}
+
+

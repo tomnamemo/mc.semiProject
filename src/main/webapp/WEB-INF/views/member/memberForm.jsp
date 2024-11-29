@@ -7,7 +7,7 @@
 request.setCharacterEncoding("UTF-8");
 %>
 
-<main class="ui-sign-up">
+<main class="ui-sign">
 	<section>
 		<article>
 			<div class="content">

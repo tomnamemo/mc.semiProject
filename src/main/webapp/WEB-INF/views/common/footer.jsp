@@ -63,7 +63,7 @@
 			<div class="dock-menu-bar">
 				<ul>
 					<li>
-						<a href="/index.html" class="ux-button icon-menu home current" role="button">
+						<a href="${contextPath}/main.do" class="ux-button icon-menu home current" role="button">
 							<i class="icon fa-solid fa-house"></i>
 							<span class="label">홈</span>
 						</a>
