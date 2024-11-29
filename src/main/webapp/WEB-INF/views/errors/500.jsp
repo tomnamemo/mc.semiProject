@@ -6,24 +6,30 @@
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <title>500 Internal Server Error</title>
  <style>
- <#error_title {
-	padding: 20px;
+ #error_title {
+padding-top: 100px;
+	padding-left: 100px;
+	
 }
 
 #error_discrption {
-	padding: 20px;
+padding-top: 30px;
+	padding-left: 120px;
 }
 
 .my_div {
-	width: 1920px;
-	height: 1080px;
+	width: 100%;
+
+	    height: 100vh;
 	border: solid;
 }
 
+
 .my_bg {
-	background-image: url("resources/images/ErrorBG.jpg");
+	background-image: url("resources/assets/images/common/ErrorBG.jpg");
 	background-size: cover;
 }
+
 </style>
 </head>
 <body>
