@@ -10,6 +10,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+  	<meta http-equiv="Content-Script-Type" content="text/javascript">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta http-equiv="imagetoolbar" content="no">
+  	<meta name="format-detection" content="telephone=no">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  	<meta name="apple-mobile-web-app-title" content="Default">
+    <meta name="robots" content="no-index, follow">
       <link type="image/png" rel="shortcut icon" href="${contextPath}/resources/assets/images/favicon/favicon.png">
 	<link type="text/css" rel="stylesheet" href="${contextPath}/resources/assets/css/font.css">
 	<link type="text/css" rel="stylesheet" href="${contextPath}/resources/assets/css/common.css">
