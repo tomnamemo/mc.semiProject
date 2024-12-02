@@ -11,7 +11,7 @@ request.setCharacterEncoding("UTF-8");
 <html>
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Script-Type" content="text/javascript">/
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="imagetoolbar" content="no">
 <meta name="format-detection" content="telephone=no">
@@ -26,7 +26,7 @@ request.setCharacterEncoding("UTF-8");
 <script type="text/javascript">var contextPath = "${contextPath}";</script>
 
 
-<title>404 Not Found</title>
+<title>405 Method Not Allowed</title>
 <style>
 	html, body,.container, section, main {width: 100%;height: 100%;}
 	article {width: 90%;height: 100%;align-items:flex-start;}
@@ -42,11 +42,12 @@ request.setCharacterEncoding("UTF-8");
  		<main>
 	 		<section>
 			 	<article>
-					<h3 class="error_title">페이지를 찾을 수 없습니다.</h3>
-					<h5 class="error_discrption">페이지의 주소가 잘못 입력되었거나 삭제된 페이지입니다.</h5>
+					<h3 class="error_title">허용되지 않는 메서드입니다.</h3>
+					<h5 class="error_discrption">요청한 HTTP 메서드는 이 리소스에서 허용되지 않습니다. 사용 가능한 메서드를 확인해 주세요.</h5>
+					<p>다시 시도하거나, 필요한 경우 관리자에게 문의해 주세요.</p>
 			 	</article>
 			</section>
 		</main>
 	</div>
 </body>
-</html>
+ </html>
