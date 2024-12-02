@@ -32,7 +32,7 @@ request.setCharacterEncoding("UTF-8");
 					</tr>
 				</c:forEach>
 			</table>
-			<a href="${contextPath}/member/memberForm.do">회원가입</a>
+<%-- 			<a href="${contextPath}/member/memberForm.do">회원가입</a> --%>
 		</article>
 	</section>
 </main>
