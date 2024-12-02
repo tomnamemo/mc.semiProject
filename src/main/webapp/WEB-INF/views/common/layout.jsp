@@ -32,7 +32,7 @@
 	<script type="text/javascript">var contextPath = "${contextPath}";</script>
 	
 	<script type="text/javascript" src="${contextPath}/resources/js/common.js"></script>
-	
+	<script type="text/javascript" src="${contextPath}/resources/js/result.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
       #container {}
