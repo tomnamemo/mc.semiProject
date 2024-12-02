@@ -10,14 +10,14 @@
       <put-attribute name="body" value="/WEB-INF/views/main.jsp" />
    </definition>
 
-
    <definition name="/pages/detail" extends="baseLayout">
       <put-attribute name="title" value="캠핑상세정보" />
       <put-attribute name="body" value="/WEB-INF/views/pages/detail.jsp" />
-   </definition> 
-      <definition name="/pages/listCampingSites" extends="resultLayout">
+   </definition>
+
+	<definition name="/pages/listCampingSites" extends="baseLayout">
       <put-attribute name="title" value="검색결과" />
       <put-attribute name="body" value="/WEB-INF/views/pages/listCampingSites.jsp" />
    </definition>
-   
+
 </tiles-definitions>

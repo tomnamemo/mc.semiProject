@@ -9,16 +9,9 @@
       <put-attribute name="aside" value="/WEB-INF/views/common/aside.jsp" />
       <put-attribute name="body" value="" />
       <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
-      
+
    </definition>
-   <definition name="resultLayout"  template="/WEB-INF/views/result/layout.jsp">
-      <put-attribute name="title" value="" />
-      <put-attribute name="header" value="/WEB-INF/views/result/header.jsp" />
-      <put-attribute name="aside" value="/WEB-INF/views/result/aside.jsp" />
-      <put-attribute name="body" value="" />
-      <put-attribute name="footer" value="/WEB-INF/views/result/footer.jsp" />
-   </definition>
-   
+
    <definition name="" extends="baseLayout">
       <put-attribute name="title" value="메인" />
       <put-attribute name="body" value="/WEB-INF/views/main.jsp" />
@@ -33,7 +26,7 @@
       <put-attribute name="title" value="회원목록" />
       <put-attribute name="body" value="/WEB-INF/views/member/listMembers.jsp" />
    </definition>
-    
+
    <definition name="/member/loginForm" extends="baseLayout">
       <put-attribute name="title" value="로그인" />
       <put-attribute name="body" value="/WEB-INF/views/member/loginForm.jsp" />
@@ -43,15 +36,5 @@
       <put-attribute name="title" value="회원가입" />
       <put-attribute name="body" value="/WEB-INF/views/member/memberForm.jsp" />
    </definition>
-   
-   <definition name="/pages/detail" extends="baseLayout">
-      <put-attribute name="title" value="상세정보" />
-      <put-attribute name="body" value="/WEB-INF/views/pages/detail.jsp" />
-   </definition>
-   
-      <definition name="/pages/listCampingSites" extends="resultLayout">
-      <put-attribute name="title" value="검색결과" />
-      <put-attribute name="body" value="/WEB-INF/views/pages/listCampingSites.jsp" />
-   </definition>
-  
+
 </tiles-definitions>
